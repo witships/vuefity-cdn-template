@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <link rel="icon" href="img/favicon.ico" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <navbar></navbar>
+        <v-main>
+          <v-container fluid>
+            <h1>{{title}}</h1>
+            <div>{{data}}</div>
+          </v-container>
+        </v-main>
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="js/compornent.js"></script>
+    <script src="js/vuetify_theme.js"></script>
+    <script src="data/data.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        // vuetify: new Vuetify({
+        //   theme: {
+        //     themes: {
+        //       light: {
+        //         primary: "#5590ac",
+        //         secondary: "#000000",
+        //         accent: "#8c9eff",
+        //         error: "#ff00ff",
+        //       },
+        //     },
+        //   },
+        // }),
+        vuetify: vuetify,
+        data() {
+          return {
+            title: "アカウント編集",
+            data: data,
+          };
+        },
+        computed: {},
+        mounted() {},
+        methods: {},
+      });
+    </script>
+  </body>
+</html>

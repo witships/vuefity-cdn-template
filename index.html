@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <link rel="icon" href="img/favicon.ico" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <!-- ヘッダー -->
+        <navbar></navbar>
+
+        <!-- サイドメニュー -->
+        <sidebar></sidebar>
+
+        <!-- メイン -->
+        <v-main class="main back">
+          <h3>{{title}}</h3>
+          <div class="white pa-2">
+            かーど
+            <div>{{data}}</div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="js/compornent.js"></script>
+    <script src="js/vuetify_theme.js"></script>
+    <script src="data/data.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: vuetify,
+        data() {
+          return {
+            title: "index.html",
+            data: data,
+          };
+        },
+        computed: {},
+        mounted() {},
+        methods: {},
+      });
+    </script>
+  </body>
+</html>
